@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav-text{
+    color: #000;
+}
+.nav-text:hover{
+    color: #615048;
+}
+.corner-button{
+    background-color: #3C3633;
+}
+.corner-button:hover{
+    background-color: #615048;
+}
+.start-text{
+    color: #615048
+}
+.fav-icon{
+    background-color: #3C3633
+}
+.link-text{
+    color: #615048
+}
+.link-text:hover{
+    color: #3C3633
+}
+.title-text:hover{
+    color: #b38c7a;
+}
+.foot{
+    color: white;
+    background-color: #3C3633;
+}
+.foot-nav:hover{
+    color: red;
+}
