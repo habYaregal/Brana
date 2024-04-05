@@ -9,7 +9,7 @@ function Login() {
         <div class="form-container sign-up">
           <form>
             <h1>Create Account</h1>
-            <div class="social-icons">
+            <div class="social-icons ">
               <a href="#" class="icon">
                 <GoogleIcon />
               </a>
@@ -24,7 +24,7 @@ function Login() {
         </div>
         <div className="form-container sign-in">
           <form>
-            <h1>Sign In</h1>
+            <h1 >Sign In</h1>
             <div className="social-icons">
               <a href="#" class="icon">
                 <GoogleIcon />

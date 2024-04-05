@@ -1,7 +1,7 @@
 import "./Home.css";
-import yemot_kine from "../Images/wifey.jpg";
-import ethiopia from "../Images/Ethiopian_soldier.jpg";
-import doctore from "../Images/The_doctor.jpg";
+import yemot_kine from "../../assets/Images/wifey.jpg";
+import ethiopia from "../../assets/Images/Ethiopian_soldier.jpg";
+import doctore from "../../assets/Images/The_doctor.jpg";
 const posts = [
     {
         title: "የሞት ቅኔ",

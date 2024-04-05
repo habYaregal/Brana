@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "./Home.css";
-import reading_image from "../Images/reading.jpg";
-import brana_logo from "../Images/logo.png";
+import reading_image from "../../assets/Images/reading.jpg";
+import brana_logo from "../../assets/Images/logo.png";
 
 function Hero (){
 

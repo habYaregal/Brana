@@ -1,7 +1,7 @@
 import "./Home.css";
-import tsegaye from "../Images/Tsegaye.jpg";
-import bealu from "../Images/bealu.jpg";
-import sibhat from "../Images/sibhat.jpg";
+import tsegaye from "../../assets/Images/Tsegaye.jpg";
+import bealu from "../../assets/Images/bealu.jpg";
+import sibhat from "../../assets/Images/sibhat.jpg";
 function Writers () {
 
     const team = [

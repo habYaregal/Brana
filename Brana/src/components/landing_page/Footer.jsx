@@ -1,5 +1,5 @@
 import "./Home.css";
-import brana_logo from "../Images/logoinbrown.png";
+import brana_logo from "../../assets/Images/logoinbrown.png";
  function Footer () {
 
     const footerNavs = [

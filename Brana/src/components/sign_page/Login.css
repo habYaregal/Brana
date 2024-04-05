@@ -11,8 +11,7 @@
 }
 
 body{
-    /* background-color: #E0CCBE; */
-    background-color: white;
+    background-color: #E0CCBE;
     background: linear-gradient(to right, #E0CCBE, #ac8471);
     display: flex;
     align-items: center;
@@ -133,7 +132,7 @@ body{
 }
 
 .social-icons{
-    margin:  0;
+    margin:  20px 0;
 }
 
 .social-icons a{
