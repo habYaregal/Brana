@@ -43,7 +43,7 @@ function Favorites () {
                         {
                             features.map((item, idx) => (
                                 <li key={idx} className="flex gap-x-4">
-                                    <div className="flex-none w-12 h-12 bg-indigo-600 text-white rounded-lg flex items-center justify-center fav-icon">
+                                    <div className="flex-none w-12 h-12 text-white rounded-lg flex items-center justify-center fav-icon">
                                         {item.icon}
                                     </div>
                                     <div className="space-y-3">

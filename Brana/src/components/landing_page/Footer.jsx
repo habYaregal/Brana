@@ -31,7 +31,7 @@ import brana_logo from "../../assets/Images/logoinbrown.png";
     ]
 
     return (
-        <footer className="text-gray-500 foot px-4 py-2 mt-20 max-w-screen-xl mx-auto md:px-8">
+        <footer className="foot px-4 py-2 mt-20 max-w-screen-xl mx-auto md:px-8">
             <div className="max-w-lg sm:mx-auto sm:text-center">
                 <img src={brana_logo} className="w-32 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-[15px]">
