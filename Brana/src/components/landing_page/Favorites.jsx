@@ -31,7 +31,7 @@ function Favorites () {
     ]
 
     return (
-        <section className="py-14">
+        <section className="pt-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className="max-w-xl space-y-3 mt-7 text-center mx-10">
                     <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">

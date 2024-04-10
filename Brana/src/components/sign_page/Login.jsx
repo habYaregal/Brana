@@ -4,7 +4,7 @@ import GoogleIcon from "@mui/icons-material/Google";
 function Login() {
   const [active, setActive] = useState(false);
   return (
-    <>
+    <div className="whole">
       <div class={active ? "container active" : "container"} id="container">
         <div class="form-container sign-up">
           <form>
@@ -70,7 +70,7 @@ function Login() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 export default Login;

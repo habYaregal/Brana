@@ -27,7 +27,7 @@ const posts = [
 
 function Recent () {
     return (
-        <section className="py-32">
+        <section className="py-16 pt-25">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
                     <h1 className="text-gray-800 text-3xl font-extrabold sm:text-4xl">ሰሞንኛ ልጥፎች</h1>
