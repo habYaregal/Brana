@@ -1,12 +1,12 @@
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
-import {Outlet, Link} from "react-router-dom";
+import {Outlet, Link, useLocation} from "react-router-dom";
 import {
   BellIcon,
-  CalendarIcon,
   FolderIcon,
   HomeIcon,
   MenuAlt2Icon,
+  PlusCircleIcon,
   UsersIcon,
   XIcon,
 } from "@heroicons/react/outline";
@@ -15,10 +15,10 @@ import brana_logo from "../../assets/Images/small-logo.png";
 import profile from "../../assets/Images/habtamu.jpg";
 
 const navigation = [
-  { name: "አጠቃላይ", href: "/admin/", icon: HomeIcon, current: true },
-  { name: "ተጠቃሚዎች", href: "/admin/users", icon: UsersIcon, current: false },
-  { name: "ልጥፎች", href: "/admin/posts", icon: FolderIcon, current: false },
-  { name: "አዲስ ልጥፍ", href: "/admin/newpost", icon: CalendarIcon, current: false },
+  { name: "አጠቃላይ", href: "/admin/", icon: HomeIcon },
+  { name: "ተጠቃሚዎች", href: "/admin/users", icon: UsersIcon},
+  { name: "ልጥፎች", href: "/admin/posts", icon: FolderIcon },
+  { name: "አዲስ ልጥፍ", href: "/admin/newpost", icon: PlusCircleIcon, },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -32,6 +32,7 @@ function classNames(...classes) {
 
 export default function Admin() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -93,13 +94,13 @@ export default function Admin() {
                 <nav className="px-2 space-y-1">
                   {navigation.map((item) => (
                     <Link to={item.href} className={classNames(
-                    item.current
+                    location.pathname === item.href
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                     "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                   )}><item.icon
                         className={classNames(
-                          item.current
+                            location.pathname === item.href
                             ? "text-gray-500"
                             : "text-gray-400 group-hover:text-gray-500",
                           "mr-4 flex-shrink-0 h-6 w-6"
@@ -131,13 +132,14 @@ export default function Admin() {
             <nav className="flex-1 px-2 pb-4 space-y-1">
               {navigation.map((item) => (
                 <Link to={item.href} className={classNames(
-                    item.current
+                   location.pathname === item.href
                       ? "bg-gray-100 text-gray-900"
                       : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                     "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                  )}><item.icon
+                  )}
+                  ><item.icon
                         className={classNames(
-                          item.current
+                            location.pathname === item.href
                             ? "text-gray-500"
                             : "text-gray-400 group-hover:text-gray-500",
                           "mr-4 flex-shrink-0 h-6 w-6"
