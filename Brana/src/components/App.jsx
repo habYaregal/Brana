@@ -14,7 +14,7 @@ import Home from './main_page/Home';
 import Blog from './main_page/Front/Blog';
 import Favour from './main_page/Favour';
 import Near from './main_page/Near';
-import Gener from './main_page/Gener';
+import Gener from './main_page/Gener/Gener';
 import Content from './main_page/Content';
 
 const router = createBrowserRouter([

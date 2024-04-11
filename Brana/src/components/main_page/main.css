@@ -8,6 +8,9 @@
 .points{
     color: #3C3633;
 }
+.points:hover{
+    color: #72503f;
+}
 .content p{
     font-size: 16px;
 }

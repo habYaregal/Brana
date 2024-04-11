@@ -1,5 +1,8 @@
-import { Link } from 'react-router-dom';
-
+import doctore from "../../../assets/Images/The_doctor.jpg";
+import yemot_kine from "../../../assets/Images/wifey.jpg";
+import susegna from "../../../assets/Images/susegna.jpg";
+import wutinkit from "../../../assets/Images/wutinkit.jpg";
+import "../main.css";
 function CardBlog() {
   // Define an array of objects for each article
   const articles = [
@@ -7,29 +10,29 @@ function CardBlog() {
       id: 1,
       date: "ሚያዝያ 2, 2016",
       title: "የሱሰኛ የአንድ ቀን ግለ-ታሪክ",
-      imageSrc: "https://images.unsplash.com/photo-1476362555312-ab9e108a0b7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint necessitatibus molestias explicabo."
+      imageSrc: susegna,
+      description: "ስለ ሱሰኞች መፃፍ ይፈልጋል፡፡ ስለ ጫታቸው፣ ሲጋራቸው፣ ሀሺሻቸው፣ ቁማራቸው፣ የወሲብ ረሀባቸው፣ ስካራቸው…"
     },
     {
       id: 2,
       date: "መጋቢት 12, 2016",
       title: "ከውጥንቅጥ ማግስት",
-      imageSrc: "https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint necessitatibus molestias explicabo."
+      imageSrc: wutinkit,
+      description: "ጥቁሩ መነጽሬ የፀይኔን መቅበዝበዝ እንጅ የነፍስና የሥጋዬን ኀዘን መሸፈን አለመቻሉን ሁኔታዬ ያሳብቅ ነበር።"
     },
     {
       id: 3,
       date: "ጥር 19, 2016",
       title: "የሞት ቅኔ",
-      imageSrc: "https://images.unsplash.com/photo-1496395031280-4201b0e022ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint necessitatibus molestias explicabo."
+      imageSrc: yemot_kine,
+      description: "ሚስቱን ማመን ካቆመ ቆየ ይህ ደግሞ የሆነው ስራ ተቀጥራ መስራት ከጀመረች ጀምሮ ነው ብሎ ነው የሚያስበው፡፡"
     },
     {
       id: 4,
       date: "የካቲት 9, 2016",
       title: "አስታማሚው",
-      imageSrc: "https://images.unsplash.com/photo-1510081887155-56fe96846e71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80",
-      description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint necessitatibus molestias explicabo."
+      imageSrc: doctore,
+      description: "እየተገለማመጠ ሀኪሙን ተጠጋው። እምባ ያቆሩ አይኖቹን ጨመቅ፣ጨመቅ እያደረገ ወደ ጆሮው ጠጋ አለና፤ “ዶክተር የማሳክምበት አቅሙ የለኝም።"
     }
   ];
 
@@ -52,7 +55,7 @@ function CardBlog() {
           <div class="grid gap-8 sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 xl:grid-cols-2 xl:gap-16">
             {/* Map over the articles array and render each article */}
             {articles.map((article) => (
-              <article key={article.id} class="flex flex-col items-center gap-4 md:flex-row lg:gap-6">
+              <article key={article.id} class="flex flex-col items-center gap-4 md:flex-row lg:gap-6 ">
                 <a href="#" class="group shrink-0 relative block h-56 w-full self-start overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-24 md:w-24 lg:h-40 lg:w-40">
                   <img
                     src={article.imageSrc}
@@ -66,13 +69,13 @@ function CardBlog() {
                   <span class="text-sm text-gray-400">{article.date}</span>
 
                   <h2 class="text-xl font-bold text-gray-800">
-                    <a href="#" class="active:text-rose-600 transition duration-100 hover:text-rose-500">{article.title}</a>
+                    <a href="#" class="transition duration-100">{article.title}</a>
                   </h2>
 
                   <p class="text-gray-500">{article.description}</p>
 
                   <div>
-                    <a href="#" class="active:text-rose-700 font-semibold text-rose-500 transition duration-100 hover:text-rose-600">ሙሉውን ያንብቡ</a>
+                    <a href="#" class=" font-semibold  transition duration-100 points">ሙሉውን ያንብቡ</a>
                   </div>
                 </div>
               </article>

@@ -39,6 +39,8 @@ function NewPost() {
             <option>ልብ አንጠልጣይ</option>
             <option>ሳይንሳዊ</option>
             <option>ፍቅር</option>
+            <option>ታሪክ</option>
+            <option>ምናባዊ</option>
           </select>
         </div>
         <textarea
