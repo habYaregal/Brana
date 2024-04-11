@@ -28,7 +28,7 @@ function Posts () {
     ]
 
     return (
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8 mb-12">
             <div className="max-w-lg">
                 <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
                     ተወዳጅ ልጥፎች

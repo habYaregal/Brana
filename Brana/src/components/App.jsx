@@ -10,6 +10,7 @@ import Dashboard from './admin_page/Dashboard/Dashboard';
 import Poster from './admin_page/About_Posts/Poster';
 import Uuser from './admin_page/About_Users/Uuser';
 import NewPost from './admin_page/Create_Post/NewPost';
+
 const router = createBrowserRouter([
   {
     path: "/",

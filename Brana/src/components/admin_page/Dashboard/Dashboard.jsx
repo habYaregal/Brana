@@ -1,4 +1,5 @@
 import GeneralStat from "./GeneralStat";
+import Example from "./PieChart";
 import Posts from "./Posts";
 import Users from "./Users";
 function Dashboard() {
@@ -6,6 +7,7 @@ function Dashboard() {
     <>
       <GeneralStat />
       <Posts />
+      <Example/>
       <Users />
     </>
   );

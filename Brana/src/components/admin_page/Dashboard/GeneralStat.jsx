@@ -3,16 +3,16 @@ import "../Admin.css";
 
     const stats = [
         {
-            data: "35K",
-            title: "Customers"
+            data: "5ሺህ+",
+            title: "ተጠቃሚዎች"
         },
         {
-            data: "40+",
-            title: "Countries"
+            data: "50+",
+            title: "ልጥፎች በቀን"
         },
         {
-            data: "30M+",
-            title: "Total revenue"
+            data: "300+",
+            title: "ፀሐፊያን"
         },
     ]
 

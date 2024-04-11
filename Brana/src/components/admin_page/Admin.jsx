@@ -2,22 +2,21 @@ import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {Outlet, Link, useLocation} from "react-router-dom";
 import {
-  BellIcon,
-  FolderIcon,
   HomeIcon,
   MenuAlt2Icon,
   PlusCircleIcon,
+  ClipboardListIcon,
   UsersIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import { SearchIcon } from "@heroicons/react/solid";
-import brana_logo from "../../assets/Images/small-logo.png";
+import brana_logo from "../../assets/Images/smalllogoinbrown.png";
 import profile from "../../assets/Images/habtamu.jpg";
+import "./Admin.css";
 
 const navigation = [
   { name: "አጠቃላይ", href: "/admin/", icon: HomeIcon },
   { name: "ተጠቃሚዎች", href: "/admin/users", icon: UsersIcon},
-  { name: "ልጥፎች", href: "/admin/posts", icon: FolderIcon },
+  { name: "ልጥፎች", href: "/admin/posts", icon: ClipboardListIcon },
   { name: "አዲስ ልጥፍ", href: "/admin/newpost", icon: PlusCircleIcon, },
 ];
 const userNavigation = [
@@ -62,7 +61,7 @@ export default function Admin() {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 side-bar">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -96,13 +95,13 @@ export default function Admin() {
                     <Link to={item.href} className={classNames(
                     location.pathname === item.href
                       ? "bg-gray-100 text-gray-900"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                      : "text-white hover:bg-gray-50 hover:text-gray-900",
                     "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                   )}><item.icon
                         className={classNames(
                             location.pathname === item.href
                             ? "text-gray-500"
-                            : "text-gray-400 group-hover:text-gray-500",
+                            : "text-white group-hover:text-gray-500",
                           "mr-4 flex-shrink-0 h-6 w-6"
                         )}
                         aria-hidden="true"
@@ -110,6 +109,23 @@ export default function Admin() {
                   ))}
                 </nav>
               </div>
+              <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
+                  <a href="#" className="flex-shrink-0 group block">
+                    <div className="flex items-center">
+                      <div>
+                        <img
+                          className="inline-block h-10 w-10 rounded-full"
+                          src={profile}
+                          alt=""
+                        />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-base font-medium text-white">ሀብታሙ ፈንታሁን</p>
+                        <p className="text-sm font-medium text-white">View profile</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
             </div>
           </Transition.Child>
           <div className="flex-shrink-0 w-14" aria-hidden="true">
@@ -120,7 +136,7 @@ export default function Admin() {
       {/* Static sidebar for desktop */}
       <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
         {/* Sidebar component, swap this element with another sidebar if you like */}
-        <div className="flex flex-col flex-grow border-r border-gray-200 pt-5 bg-white overflow-y-auto">
+        <div className="flex flex-col flex-grow border-r border-gray-200 pt-5 side-bar overflow-y-auto">
           <div className="flex items-center flex-shrink-0 px-4">
             <img
               className="h-14 w-auto"
@@ -134,14 +150,14 @@ export default function Admin() {
                 <Link to={item.href} className={classNames(
                    location.pathname === item.href
                       ? "bg-gray-100 text-gray-900"
-                      : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
+                      : "text-white hover:bg-gray-50 hover:text-gray-900",
                     "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                   )}
                   ><item.icon
                         className={classNames(
                             location.pathname === item.href
                             ? "text-gray-500"
-                            : "text-gray-400 group-hover:text-gray-500",
+                            : "text-white group-hover:text-gray-500",
                           "mr-4 flex-shrink-0 h-6 w-6"
                         )}
                         aria-hidden="true"
@@ -149,90 +165,36 @@ export default function Admin() {
               ))}
             </nav>
           </div>
+          <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
+                  <a href="#" className="flex-shrink-0 group block">
+                    <div className="flex items-center">
+                      <div>
+                        <img
+                          className="inline-block h-10 w-10 rounded-full"
+                          src={profile}
+                          alt=""
+                        />
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-base font-medium text-white profile-text">ሀብታሙ ፈንታሁን</p>
+                        <p className="text-sm font-medium text-white profile-text">View profile</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
         </div>
       </div>
       <div className="md:pl-64 flex flex-col flex-1">
-        <div className="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white shadow">
-          <button
-            type="button"
-            className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
-            onClick={() => setSidebarOpen(true)}
-          >
-            <span className="sr-only">Open sidebar</span>
-            <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-          <div className="flex-1 px-4 flex justify-between">
-            <div className="flex-1 flex">
-              <form className="w-full flex md:ml-0" action="#" method="GET">
-                <label htmlFor="search-field" className="sr-only">
-                  Search
-                </label>
-                <div className="relative w-full text-gray-400 focus-within:text-gray-600">
-                  <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                    <SearchIcon className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <input
-                    id="search-field"
-                    className="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm"
-                    placeholder="ይፈልጉ"
-                    type="search"
-                    name="search"
-                  />
-                </div>
-              </form>
-            </div>
-            <div className="ml-4 flex items-center md:ml-6">
-              <button
-                type="button"
-                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                <span className="sr-only">View notifications</span>
-                <BellIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-
-              {/* Profile dropdown */}
-              <Menu as="div" className="ml-3 relative">
-                <div>
-                  <Menu.Button className="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <span className="sr-only">Open user menu</span>
-                    <img
-                      className="h-8 w-8 rounded-full"
-                      src={profile}
-                      alt=""
-                    />
-                  </Menu.Button>
-                </div>
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    {userNavigation.map((item) => (
-                      <Menu.Item key={item.name}>
-                        {({ active }) => (
-                          <a
-                            href={item.href}
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            {item.name}
-                          </a>
-                        )}
-                      </Menu.Item>
-                    ))}
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            </div>
+          <div className="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100">
+            <button
+              type="button"
+              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              onClick={() => setSidebarOpen(true)}
+            >
+              <span className="sr-only">Open sidebar</span>
+              <MenuAlt2Icon className="h-6 w-6" aria-hidden="true" />
+            </button>
           </div>
-        </div>
         <main className="flex-1">
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">

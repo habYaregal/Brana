@@ -2,6 +2,7 @@ import prof1 from "../../../assets/Images/profile_one.jpg";
 import prof2 from "../../../assets/Images/profile_two.jpg";
 import prof3 from "../../../assets/Images/profile_three.jpg";
 import prof4 from "../../../assets/Images/profile_four.jpg";
+import "../Admin.css";
 function Users () {
 
     const tableItems = [
@@ -36,7 +37,7 @@ function Users () {
     ]
 
     return (
-        <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-10">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-10 mt-12">
             <div className="items-start justify-between md:flex">
                 <div className="max-w-lg">
                     <h3 className="text-gray-800 text-xl font-bold sm:text-2xl">
@@ -49,7 +50,7 @@ function Users () {
                 <div className="mt-3 md:mt-0">
                     <a
                         href="javascript:void(0)"
-                        className="inline-block px-4 py-2 text-white duration-150 font-medium bg-indigo-600 rounded-lg hover:bg-indigo-500 active:bg-indigo-700 md:text-sm"
+                        className="inline-block px-4 py-2 text-white duration-150 font-medium rounded-lg add-member-button md:text-sm"
                     >
                         አባል ጨምር
                     </a>
@@ -78,7 +79,11 @@ function Users () {
                                         </div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">{item.email}</td>
-                                    <td className="px-6 py-4 whitespace-nowrap">{item.type}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap">
+                                    <span className={`px-3 py-2 rounded-full font-semibold text-xs ${item.type == "ክፍያ" ? "text-green-600 bg-green-50" : "text-red-600 bg-red-50"}`}>
+                                            {item.type}
+                                        </span>
+                                    </td>
                                     <td className="px-6 py-4 whitespace-nowrap">{item.hour}</td>
                                     <td className="text-right px-6 whitespace-nowrap">
                                         <a href="javascript:void()" className="py-2 px-3 font-medium text-indigo-600 hover:text-indigo-500 duration-150 hover:bg-gray-50 rounded-lg">
