@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.common-background{
+    background-color: #3C3633;
+}
+.points{
+    color: #3C3633;
+}
+.content p{
+    font-size: 16px;
+}

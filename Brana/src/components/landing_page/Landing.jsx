@@ -3,7 +3,7 @@ import Favorites from "./Favorites";
 import Recent from "./Recent";
 import Writers from "./Writers";
 import Contact from "./Contact";
-import Footer from "./Footer";
+import Footer from "../Footer";
 function Landing() {
   return (
     <>
