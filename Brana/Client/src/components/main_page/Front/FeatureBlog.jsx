@@ -1,6 +1,8 @@
 import "../main.css";
 import ethiopia from "../../../assets/Images/Ethiopian_soldier.jpg";
 import { Link } from "react-router-dom";
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import CommentIcon from '@mui/icons-material/Comment';
 function FeatureBlog() {
   return (
     <div className="relative py-16 bg-white">

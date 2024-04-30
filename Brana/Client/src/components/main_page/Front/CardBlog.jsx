@@ -73,10 +73,6 @@ function CardBlog() {
                   </h2>
 
                   <p class="text-gray-500">{article.description}</p>
-
-                  <div>
-                    <a href="#" class=" font-semibold  transition duration-100 points">ሙሉውን ያንብቡ</a>
-                  </div>
                 </div>
               </article>
             ))}

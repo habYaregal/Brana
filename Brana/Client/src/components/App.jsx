@@ -12,10 +12,10 @@ import Uuser from './admin_page/About_Users/Uuser';
 import NewPost from './admin_page/Create_Post/NewPost';
 import Home from './main_page/Home';
 import Blog from './main_page/Front/Blog';
-import Favour from './main_page/Favour';
-import Near from './main_page/Near';
+import Favour from './main_page/Favourite/Favour';
 import Gener from './main_page/Gener/Gener';
 import Content from './main_page/Content';
+import Near from './main_page/Recent/Near';
 
 const router = createBrowserRouter([
   {

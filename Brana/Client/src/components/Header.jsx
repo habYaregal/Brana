@@ -1,6 +1,7 @@
 import { useState } from "react";
 import brana_logo from "../assets/Images/logo.png";
 import { Link, useLocation } from "react-router-dom";
+import profile from "../assets/Images/habtamu.jpg";
 
 function Header(props) {
   const [state, setState] = useState(false);
@@ -14,7 +15,7 @@ function Header(props) {
   return (
     <nav className=" items-center mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
       <div className="flex justify-between">
-        <a href="javascript:void(0)">
+        <a href="/">
           <img src={brana_logo} width={160} height={40} alt="Float UI logo" />
         </a>
         <button
@@ -72,7 +73,7 @@ function Header(props) {
             </li>
           ))}
         </div>
-        {location.pathname === "/" && (
+        {location.pathname === "/" ? (
           <li className="order-2 py-5 md:py-0">
             <a
               href="javascript:void(0)"
@@ -81,7 +82,21 @@ function Header(props) {
               ይጀምሩ
             </a>
           </li>
-        )}
+        ):(
+        <div className="flex-shrink-0">
+            <a href="#" className="flex-shrink-0 group block">
+              <div className="flex items-center">
+                <div>
+                  <img
+                    className="inline-block h-10 w-10 rounded-full"
+                    src={profile}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          )}
       </ul>
     </nav>
   );
