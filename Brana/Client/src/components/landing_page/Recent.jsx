@@ -2,10 +2,21 @@ import "./Home.css";
 import yemot_kine from "../../assets/Images/wifey.jpg";
 import ethiopia from "../../assets/Images/Ethiopian_soldier.jpg";
 import doctore from "../../assets/Images/The_doctor.jpg";
+import { useEffect, useState } from "react";
+
+
+function Recent () {
+    const [datas,setData]=useState([]);
+useEffect(()=>{
+    fetch('http://localhost:3000/')
+    .then(res=> res.json())
+    .then(data=> setData(data))
+    .catch(err=>console.log(err));
+},[]);
 const posts = [
     {
-        title: "የሞት ቅኔ",
-        desc: "ሚስቱን ማመን ካቆመ ቆየ ይህ ደግሞ የሆነው ስራ ተቀጥራ መስራት ከጀመረች ጀምሮ ነው ብሎ ነው የሚያስበው፡፡ከዛን ጊዜ ጀምሮ የምታደርገው ነገር በሙሉ እየተከታተለ ጥልቀቱን ሊረዳው የማይችለው ቅናት ውስጥ ገባ፡፡",
+        title: datas.title,
+        desc: datas.content,
         img: yemot_kine,
         date: "ሚያዝያ 12,2016",
         href: "javascript:void(0)"
@@ -25,7 +36,6 @@ const posts = [
         href: "javascript:void(0)"
     }]
 
-function Recent () {
     return (
         <section className="py-16 pt-25">
             <div className="max-w-screen-xl mx-auto px-4 md:px-8">
