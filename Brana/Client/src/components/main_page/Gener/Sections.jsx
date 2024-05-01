@@ -1,27 +1,29 @@
+import '../main.css';
+import { Link, useLocation } from "react-router-dom";
 function Sections(){
     const navigation = [
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/",
             name: "አስቂኝ"
         },
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/love",
             name: "ፍቅር"
         },
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/suspense",
             name: "ልብ አንጠልጣይ"
         },
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/science",
             name: "ሳይንሳዊ"
         },
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/fantasy",
             name: "ምናባዊ"
         },
         {
-            href: "javascript:void(0)",
+            href: "/blog/gener/history",
             name: "ታሪክ"
         },
     ]
@@ -41,10 +43,10 @@ function Sections(){
                     {
                         navigation.map((item, idx) => (
                             // Replace [idx == 0] with [window.location.pathname == item.path] or create your own logic
-                            <li key={idx} className={`py-2 border-b-2 ${idx == 0 ? "border-indigo-600 text-indigo-600" : "border-white text-gray-500"}`}>
+                            <li key={idx} className={`py-2 border-b-2 ${location.pathname === item.href? "first-item" : "border-white text-gray-500"}`}>
                                 <a
                                     href={item.href}
-                                    className="py-2.5 px-4 rounded-lg duration-150 text-sm hover:text-indigo-600 hover:bg-gray-50 active:bg-gray-100 font-medium"
+                                    className="py-2.5 px-4 rounded-lg duration-150 text-sm first-item hover:bg-gray-50 active:bg-gray-100 font-medium"
                                 >
                                     {item.name}
                                 </a>

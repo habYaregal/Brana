@@ -1,11 +1,11 @@
-import CardBlog from "../Front/CardBlog";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import Sections from "./Sections";
 
 function Gener(){
     return(
         <>
             <Sections/>
-            <CardBlog/>
+            <Outlet/>
         </>
     )
 }

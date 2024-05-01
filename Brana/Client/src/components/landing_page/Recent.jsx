@@ -28,7 +28,7 @@ function Recent() {
             <li className="w-full mx-auto group sm:max-w-sm" key={key}>
               <a href={items.href}>
                 <img
-                src={imageCOver}
+                src={items.cover}
                   loading="lazy"
                   alt={items.cover}
                   className="w-full rounded-lg"

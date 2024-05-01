@@ -16,6 +16,12 @@ import Favour from './main_page/Favourite/Favour';
 import Gener from './main_page/Gener/Gener';
 import Content from './main_page/Content';
 import Near from './main_page/Recent/Near';
+import LoveBlog from './main_page/Gener/LoveBlog';
+import ScienceBlog from './main_page/Gener/ScienceBlog';
+import FunBlog from './main_page/Gener/FunBlog';
+import FantasyBlog from './main_page/Gener/FantasyBlog';
+import SuspenseBlog from './main_page/Gener/SuspenseBlog';
+import HistoryBlog from './main_page/Gener/HistoryBlog';
 
 const router = createBrowserRouter([
   {
@@ -67,6 +73,32 @@ const router = createBrowserRouter([
       {
         path: "/blog/gener",
         element: <Gener/>,
+        children: [
+          {
+            path: "/blog/gener/",
+            element: <FunBlog/>,
+          },
+          {
+            path: "/blog/gener/love",
+            element: <LoveBlog/>,
+          },
+          {
+            path: "/blog/gener/science",
+            element: <ScienceBlog/>,
+          },
+          {
+            path: "/blog/gener/fantasy",
+            element: <FantasyBlog/>,
+          },
+          {
+            path: "/blog/gener/suspense",
+            element: <SuspenseBlog/>,
+          },
+          {
+            path: "/blog/gener/history",
+            element: <HistoryBlog/>,
+          },
+        ]
       },
       {
         path: "/blog/content",
